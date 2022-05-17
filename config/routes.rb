@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :users
 
-  get '/hello', to: 'application#hello_world'
+  post'/login', to: 'authentication#login'
   
 end
