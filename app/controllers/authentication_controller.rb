@@ -4,6 +4,7 @@ class AuthenticationController < ApplicationController
 
     def login
         @user=User.find_by username: params[:username]
+        # byebug
         if @user&.authenticate(params[:password])
             payload = { user_id: @user.id }
             secret = "blizz"
