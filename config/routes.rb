@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :addresses
   resources :users
 
+  get '/meats', to: "toppings#meats"
+  get '/veggies', to: "toppings#veggies"
+
   post'/login', to: 'authentication#login'
   
 end
