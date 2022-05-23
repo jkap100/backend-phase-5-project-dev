@@ -1,10 +1,30 @@
 class PizzaOrderSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :store_id, :due_date, :crust_id, :sauce_id, :due_date, :due_time, :status, :quantity, :first_name, :last_name, :street, :city, :state, :zip
+  attributes :id, :user, :first_name, :last_name, :store_name, :store_address, :due_date, :crust, :sauce, :due_date, :due_time, :status, :quantity, :street, :city, :state, :zip
 
-  has_one :user
-  has_one :store
-  has_one :crust
-  has_one :sauce
+
+  def user
+    object.user.username
+  end
+
+  def store_name
+    object.store.name
+  end
+
+  def store_address
+    object.store.street
+  end
+
+  def crust
+    object.crust.name
+  end
+
+  def sauce
+    object.sauce.name
+  end
+  # has_one :user
+  # has_one :store
+  # has_one :crust
+  # has_one :sauce
 
   has_many :pizza_order_toppings
 end
