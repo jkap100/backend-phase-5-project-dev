@@ -3,11 +3,11 @@ class PizzaOrderToppingsController < ApplicationController
     skip_before_action :authorize, only: [:index]
 
     def index
-        render json: PizzaOrderToppings.all
+        render json: PizzaOrderTopping.all
     end
 
     def create
-        pizza_order_toppings = PizzaOrderToppings.create!(pizza_order_toppings_params)
+        pizza_order_toppings = PizzaOrderTopping.create!(pizza_order_toppings_params)
         render json: pizza_order_toppings, status: :created
     end
 

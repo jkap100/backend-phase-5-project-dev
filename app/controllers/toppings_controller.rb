@@ -1,6 +1,6 @@
 class ToppingsController < ApplicationController
 
-    skip_before_action :authorize, only: [:index]
+    skip_before_action :authorize, only: [:index, :meats, :veggies]
 
     def index
         render json: Topping.all

@@ -49,7 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_19_161005) do
     t.bigint "sauce_id", null: false
     t.string "due_date"
     t.integer "due_time"
-    t.boolean "status"
+    t.string "status"
     t.integer "quantity"
     t.string "image"
     t.datetime "created_at", null: false
@@ -77,6 +77,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_19_161005) do
     t.string "open"
     t.string "close"
     t.integer "phone"
+    t.float "lat"
+    t.float "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

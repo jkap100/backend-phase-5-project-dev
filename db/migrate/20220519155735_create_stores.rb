@@ -8,6 +8,8 @@ class CreateStores < ActiveRecord::Migration[7.0]
       t.string :open
       t.string :close
       t.integer :phone
+      t.float :lat
+      t.float :lng
 
       t.timestamps
     end
