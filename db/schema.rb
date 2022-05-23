@@ -15,6 +15,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_19_161005) do
   enable_extension "plpgsql"
 
   create_table "addresses", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
     t.string "street"
     t.string "city"
     t.string "state"
@@ -43,7 +45,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_19_161005) do
 
   create_table "pizza_orders", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "address_id", null: false
     t.bigint "store_id", null: false
     t.bigint "crust_id", null: false
     t.bigint "sauce_id", null: false
@@ -51,10 +52,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_19_161005) do
     t.integer "due_time"
     t.string "status"
     t.integer "quantity"
-    t.string "image"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["address_id"], name: "index_pizza_orders_on_address_id"
     t.index ["crust_id"], name: "index_pizza_orders_on_crust_id"
     t.index ["sauce_id"], name: "index_pizza_orders_on_sauce_id"
     t.index ["store_id"], name: "index_pizza_orders_on_store_id"
@@ -76,7 +81,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_19_161005) do
     t.string "state"
     t.string "open"
     t.string "close"
-    t.integer "phone"
+    t.string "phone"
     t.float "lat"
     t.float "lng"
     t.datetime "created_at", null: false
@@ -103,7 +108,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_19_161005) do
 
   add_foreign_key "pizza_order_toppings", "pizza_orders"
   add_foreign_key "pizza_order_toppings", "toppings"
-  add_foreign_key "pizza_orders", "addresses"
   add_foreign_key "pizza_orders", "crusts"
   add_foreign_key "pizza_orders", "sauces"
   add_foreign_key "pizza_orders", "stores"

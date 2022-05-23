@@ -7,7 +7,7 @@ class CreateStores < ActiveRecord::Migration[7.0]
       t.string :state
       t.string :open
       t.string :close
-      t.integer :phone
+      t.string :phone
       t.float :lat
       t.float :lng
 

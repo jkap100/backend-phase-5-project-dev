@@ -1,6 +1,6 @@
 class PizzaOrder < ApplicationRecord
   belongs_to :user
-  belongs_to :address
+  
   belongs_to :store
   belongs_to :crust
   belongs_to :sauce
