@@ -1,5 +1,5 @@
 class PizzaOrderSerializer < ActiveModel::Serializer
-  attributes :id, :user, :first_name, :last_name, :store_name, :store_address, :due_date, :crust, :sauce, :due_date, :due_time, :status, :quantity, :street, :city, :state, :zip
+  attributes :id, :user, :first_name, :last_name, :store_name, :store_address, :due_date, :crust, :sauce, :due_date, :due_time, :status, :quantity, :price, :street, :city, :state, :zip
 
 
   def user
@@ -20,6 +20,11 @@ class PizzaOrderSerializer < ActiveModel::Serializer
 
   def sauce
     object.sauce.name
+  end
+
+
+  def price
+    object.quantity*(object.pizza_order_toppings.count*1.5+10)
   end
   # has_one :user
   # has_one :store

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/meats', to: "toppings#meats"
   get '/veggies', to: "toppings#veggies"
 
+  get 'carts', to: "pizza_orders#cart"
+
   post'/login', to: 'authentication#login'
   
 end
