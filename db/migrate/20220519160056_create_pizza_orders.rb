@@ -9,6 +9,7 @@ class CreatePizzaOrders < ActiveRecord::Migration[7.0]
       t.string :due_date
       t.integer :due_time
       t.string :status
+      t.string :order_type
       t.integer :quantity
       t.string :first_name
       t.string :last_name

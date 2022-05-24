@@ -1,5 +1,5 @@
 class PizzaOrderSerializer < ActiveModel::Serializer
-  attributes :id, :user, :first_name, :last_name, :store_name, :store_address, :due_date, :crust, :sauce, :due_date, :due_time, :status, :quantity, :price, :street, :city, :state, :zip
+  attributes :id, :user, :first_name, :last_name, :store_name, :store_address, :due_date, :crust, :sauce, :due_date, :due_time, :status, :quantity, :price, :street, :city, :state, :zip, :order_type
 
 
   def user
