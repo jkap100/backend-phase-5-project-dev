@@ -6,6 +6,11 @@ class StoresController < ApplicationController
         render json: Store.all
     end
 
+    def show
+        store = Store.find(params[:id])
+        render json: store
+    end
+
     def create
         store = Store.create!(store_params)
         render json: crust, status: :created
