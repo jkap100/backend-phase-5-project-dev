@@ -34,7 +34,7 @@ class PizzaOrdersController < ApplicationController
     private
 
     def pizza_order_params
-        params.permit(:user_id, :store_id, :crust_id, :sauce_id, :due_date, :due_time, :status, :quantity, :price, :first_name, :last_name, :street, :city, :state, :zip, :order_type)
+        params.permit(:user_id, :store_id, :crust_id, :sauce_id, :due_date, :due_time, :status, :quantity, :price, :first_name, :last_name, :street, :city, :state, :zip, :order_type, :card_number, :ccv, :card_expiration, :card_zip)
     end
 
 end

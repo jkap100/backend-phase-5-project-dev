@@ -59,6 +59,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_19_161005) do
     t.string "city"
     t.string "state"
     t.string "zip"
+    t.bigint "card_number"
+    t.integer "ccv"
+    t.string "card_expiration"
+    t.integer "card_zip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["crust_id"], name: "index_pizza_orders_on_crust_id"

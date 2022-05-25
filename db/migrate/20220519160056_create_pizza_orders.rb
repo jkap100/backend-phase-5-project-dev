@@ -17,6 +17,10 @@ class CreatePizzaOrders < ActiveRecord::Migration[7.0]
       t.string :city
       t.string :state
       t.string :zip
+      t.integer :card_number, :limit => 8
+      t.integer :ccv
+      t.string :card_expiration
+      t.integer :card_zip
 
       
 
