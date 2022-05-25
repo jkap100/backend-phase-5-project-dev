@@ -6,6 +6,10 @@ class PizzaOrdersController < ApplicationController
         render json: PizzaOrder.all
     end
 
+    def orders
+        render json: PizzaOrder.where(store_id: params[:store_id], order_type: params[:order_type], status: params[:status])
+    end
+
     def cart
         cart = PizzaOrder.where(user_id: params[:user_id], status: 'Cart')
         render json: cart

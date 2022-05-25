@@ -8,10 +8,13 @@ Rails.application.routes.draw do
   resources :addresses
   resources :users
 
+  
+
   get '/meats', to: "toppings#meats"
   get '/veggies', to: "toppings#veggies"
 
   get 'carts', to: "pizza_orders#cart"
+  get '/orders', to: "pizza_orders#orders"
 
   post'/login', to: 'authentication#login'
   
