@@ -9,5 +9,7 @@ class User < ApplicationRecord
 
     has_many :pizza_order_toppings, dependent: :destroy
     has_many :toppings, through: :pizza_order_toppings
+
+    validates :email, email: true
     
 end

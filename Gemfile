@@ -60,3 +60,5 @@ gem 'active_model_serializers',
 gem "awesome_print"
 
 gem 'jwt'
+
+gem 'email_validator'
