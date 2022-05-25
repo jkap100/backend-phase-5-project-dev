@@ -49,7 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_19_161005) do
     t.bigint "crust_id", null: false
     t.bigint "sauce_id", null: false
     t.string "due_date"
-    t.integer "due_time"
+    t.string "due_time"
     t.string "status"
     t.string "order_type"
     t.integer "quantity"

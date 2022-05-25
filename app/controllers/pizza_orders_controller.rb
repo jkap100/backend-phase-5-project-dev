@@ -18,6 +18,7 @@ class PizzaOrdersController < ApplicationController
     end
 
     def update
+        # byebug
         pizza_order = PizzaOrder.find(params[:id])
         pizza_order.update!(pizza_order_params)
         render json: pizza_order, status: :accepted

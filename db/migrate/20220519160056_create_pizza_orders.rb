@@ -7,7 +7,7 @@ class CreatePizzaOrders < ActiveRecord::Migration[7.0]
       t.references :crust, null: false, foreign_key: true
       t.references :sauce, null: false, foreign_key: true
       t.string :due_date
-      t.integer :due_time
+      t.string :due_time
       t.string :status
       t.string :order_type
       t.integer :quantity
