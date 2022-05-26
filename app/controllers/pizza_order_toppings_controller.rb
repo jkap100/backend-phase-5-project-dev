@@ -9,6 +9,7 @@ class PizzaOrderToppingsController < ApplicationController
     def create
         # byebug
         pizza_order_toppings = PizzaOrderTopping.create!(pizza_order_toppings_params)
+       
         render json: pizza_order_toppings, status: :created
     end
 
