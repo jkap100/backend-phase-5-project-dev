@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :addresses
   resources :users
 
-  
+  get "stores_by_state", to: "stores#stores_by_state"
 
   get '/meats', to: "toppings#meats"
   get '/veggies', to: "toppings#veggies"

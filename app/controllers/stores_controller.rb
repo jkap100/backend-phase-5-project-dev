@@ -1,9 +1,14 @@
 class StoresController < ApplicationController
 
-    skip_before_action :authorize, only: [:index]
+    skip_before_action :authorize, only: [:index, :stores_by_state]
 
     def index
         render json: Store.all
+    end
+
+    def stores_by_state
+        store = Store.where(state: params[:state])
+        render json: store
     end
 
     def show
