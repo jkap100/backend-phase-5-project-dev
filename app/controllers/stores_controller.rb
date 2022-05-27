@@ -13,13 +13,19 @@ class StoresController < ApplicationController
 
     def create
         store = Store.create!(store_params)
-        render json: crust, status: :created
+        render json: store, status: :created
+    end
+
+    def destroy
+        store = Store.find(params[:id])
+        store.destroy
+        head :no_content
     end
 
     private
 
     def store_params
-        params.permit(:name, :street, :city, :state, :open, :close, :phone)
+        params.permit(:name, :street, :city, :state, :open, :close, :phone, :lat, :lng)
     end
 
 end
