@@ -55,10 +55,25 @@ Store.create(name: "Beaverton", street: "11425 SW Beaverton", city: "Beaverton",
 
 Store.create(name: "Lents", street: "4040 SE 82nd Ave", city: "Portland", state: "OR", open: "9:00 AM", close: "11:00 PM", phone: "971-650-6000", lat: 45.493328, lng: -122.5745717)
 
+Store.create( name: "Seattle", street: "1918 4th Ave W", city: "Seattle", state: "WA",open: "10:30 AM", close: "11:00 PM", phone: "503-245-6541", lat: 47.63647121466673,lng: -122.3621557092148)
+  
+Store.create(name: "Bellevue", street: "1510 100th Ave SE", city: "Bellevue",
+state: "WA", open: "10:30 AM", close: "11:00 PM", phone: "246-200-6333", lat: 47.597591316451485, lng: -122.20560053343355)
+    
+Store.create(name: "Ballard", street: "7517 27th Ave NW", city: "Seattle", state: "WA", open: "10:30 AM", close: "11:00 PM", phone: "503-780-4500", lat: 47.68364365542274, lng: -122.39099482054293)
+   
+Store.create(name: "Oakland", street: "912 8th St", city: "Oakland", state: "CA", open: "10:30 AM", close: "11:00 PM", phone: "503-555-6200", lat: 37.80391168096338, lng: -122.28323743978119)
+ 
+Store.create(name: "LODO", street: "1637 Wazee St", city: "Denver", state: "CO", open: "10:30 AM", close: "11:00 PM", phone: "541-245-9000", lat: 39.75217332319841, lng: -104.99971945007819)
+
 #PIZZA ORDERS
 # PizzaOrder.create(user_id: 1, address_id: 1, store_id: 1, crust_id:1, sauce_id: 1, due_date: "Monday", due_time: 10, status: false, quantity: 1, image: "pizza order image")
 
 #PIZZA ORDER TOPPINGS
 PizzaOrderTopping.create(pizza_order_id: 1, topping_id: 1)
+
+
+  
+
 
 puts "Seeding Complete"
