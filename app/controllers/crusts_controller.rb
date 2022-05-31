@@ -11,6 +11,12 @@ class CrustsController < ApplicationController
         render json: crust, status: :created
     end
 
+    def destroy
+        crust = Crust.find(params[:id])
+        crust.destroy
+        head :no_content
+    end
+
     private
 
     def crust_params
