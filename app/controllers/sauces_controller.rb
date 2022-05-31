@@ -11,6 +11,12 @@ class SaucesController < ApplicationController
         render json: sauce, status: :created
     end
 
+    def destroy
+        sauce = Sauce.find(params[:id])
+        sauce.destroy
+        head :no_content
+    end
+
     private
 
     def sauce_params

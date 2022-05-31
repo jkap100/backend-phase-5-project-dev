@@ -21,6 +21,12 @@ class ToppingsController < ApplicationController
         render json: topping, status: :created
     end
 
+    def destroy
+        topping = Topping.find(params[:id])
+        topping.destroy
+        head :no_content
+    end
+
     private
 
     def crust_params
