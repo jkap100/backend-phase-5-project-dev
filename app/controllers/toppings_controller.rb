@@ -17,7 +17,7 @@ class ToppingsController < ApplicationController
     end
 
     def create
-        topping = Topping.create!(crust_params)
+        topping = Topping.create!(topping_params)
         render json: topping, status: :created
     end
 
@@ -29,7 +29,7 @@ class ToppingsController < ApplicationController
 
     private
 
-    def crust_params
+    def topping_params
         params.permit(:name, :category, :price, :image)
     end
     
